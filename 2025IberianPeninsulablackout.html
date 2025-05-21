@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2025년 스페인 대정전 심층 분석: 에너지 산업 동향 및 안정성 연구</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif; /* Tailwind's default sans-serif stack often includes Inter */
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .kpi-value {
+            font-size: 2.5rem; /* 40px */
+            line-height: 1.2;
+            font-weight: 700;
+        }
+        .kpi-label {
+            font-size: 0.875rem; /* 14px */
+            line-height: 1.25rem; /* 20px */
+            color: #4a5568; /* text-gray-700 */
+        }
+        .section-title {
+            font-size: 1.875rem; /* 30px */
+            line-height: 2.25rem; /* 36px */
+            font-weight: 600;
+            margin-bottom: 1rem; /* mb-4 */
+            color: #2c5282; /* text-blue-800 */
+        }
+        .card {
+            background-color: white;
+            border-radius: 0.5rem; /* rounded-lg */
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); /* shadow-md */
+            padding: 1.5rem; /* p-6 */
+            margin-bottom: 1.5rem; /* mb-6 */
+        }
+        .timeline-item {
+            position: relative;
+            padding-left: 2.5rem; /* pl-10 */
+            padding-bottom: 1.5rem; /* pb-6 */
+            border-left: 2px solid #cbd5e0; /* border-gray-300 */
+        }
+        .timeline-item:last-child {
+            border-left: 2px solid transparent; /* Hide border for last item */
+            padding-bottom: 0;
+        }
+        .timeline-marker {
+            position: absolute;
+            left: -0.5rem; /* Adjust to center on the line */
+            top: 0.25rem; /* Adjust vertical alignment */
+            width: 1rem; /* w-4 */
+            height: 1rem; /* h-4 */
+            border-radius: 9999px; /* rounded-full */
+            background-color: #f6ad55; /* bg-orange-400 */
+            border: 2px solid white;
+        }
+        .flowchart-step {
+            border: 2px solid #319795; /* border-teal-500 */
+            padding: 0.75rem; /* p-3 */
+            border-radius: 0.375rem; /* rounded-md */
+            text-align: center;
+            background-color: #e6fffa; /* bg-teal-50 */
+            color: #234e52; /* text-teal-800 */
+            font-weight: 500;
+        }
+        .flowchart-arrow {
+            font-size: 1.5rem; /* text-2xl */
+            color: #319795; /* text-teal-500 */
+            margin: 0 0.5rem; /* mx-2 */
+            align-self: center;
+        }
+        /* Ensure Inter font is loaded if not part of Tailwind's default */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+    </style>
+    </head>
+<body class="bg-gray-100 text-gray-800">
+
+    <header class="bg-blue-700 text-white py-8 shadow-lg">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-3xl md:text-4xl font-bold mb-2">2025년 스페인 대정전 심층 분석</h1>
+            <p class="text-lg md:text-xl text-blue-200">에너지 산업 동향 및 현대 전력망 안정성 연구</p>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 py-8">
+
+        <section id="introduction" class="mb-12">
+            <div class="card">
+                <h2 class="section-title">서론: 대정전, 현대 전력망의 경고</h2>
+                <p class="mb-4 text-lg">2025년 4월 28일, 이베리아 반도(스페인과 포르투갈)는 전력 시스템의 전면적인 공급 중단, 즉 대규모 정전을 경험했습니다. 이 사건은 현대 전력망이 직면한 복잡한 도전 과제와 취약성을 드러내며, 에너지 산업 전반에 중요한 질문을 던졌습니다. 본 인포그래픽은 해당 사고의 주요 데이터를 분석하여, 미래 전력 시스템의 안정성 확보와 에너지 산업 동향에 대한 시사점을 도출하고자 합니다.</p>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
+                    <div class="bg-blue-100 p-4 rounded-lg">
+                        <div class="kpi-value text-blue-600">2025년 4월 28일</div>
+                        <div class="kpi-label">사고 발생일</div>
+                    </div>
+                    <div class="bg-blue-100 p-4 rounded-lg">
+                        <div class="kpi-value text-blue-600">이베리아 반도</div>
+                        <div class="kpi-label">영향 지역</div>
+                    </div>
+                    <div class="bg-blue-100 p-4 rounded-lg">
+                        <div class="kpi-value text-blue-600">수 초 내 붕괴</div>
+                        <div class="kpi-label">사고 심각성</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="pre-incident" class="mb-12">
+            <div class="card">
+                <h2 class="section-title">사고 이전: 취약성의 징후들</h2>
+                <p class="mb-6 text-lg">대정전 발생 직전, 이베리아 반도의 전력 시스템은 몇 가지 중요한 특징을 보였습니다. 특히 높은 재생에너지 발전 비중과 낮은 시스템 관성은 잠재적인 취약 요인이었습니다. 이러한 조건들이 어떻게 사고의 배경이 되었는지 살펴보겠습니다.</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                    <div>
+                        <h3 class="text-xl font-semibold mb-3 text-blue-700">발전원 구성 (12:30 CET 기준)</h3>
+                        <p class="mb-4">사고 당일 12:30 CET, 스페인의 발전원 구성은 태양광 발전이 53.34%를 차지할 정도로 인버터 기반 재생에너지 의존도가 매우 높았습니다. 반면, 전통적 동기 발전기인 복합화력발전(CCGT) 비중은 4.82%에 불과했습니다.</p>
+                        <div class="chart-container h-72 sm:h-80 md:h-96 max-w-md">
+                            <canvas id="generationMixChart"></canvas>
+                        </div>
+                    </div>
+                    <div class="space-y-6">
+                        <div class="bg-orange-100 p-6 rounded-lg text-center shadow">
+                            <div class="kpi-value text-orange-500">약 78~80%</div>
+                            <div class="kpi-label">총 재생에너지 발전 비중</div>
+                            <p class="mt-2 text-sm text-orange-700">높은 인버터 기반 자원(IBR) 의존도 시사</p>
+                        </div>
+                        <div class="bg-teal-100 p-6 rounded-lg text-center shadow">
+                            <div class="kpi-value text-teal-600">4.82%</div>
+                            <div class="kpi-label">복합화력발전(CCGT) 비중</div>
+                            <p class="mt-2 text-sm text-teal-700">매우 낮은 시스템 관성으로 이어짐</p>
+                        </div>
+                        <p class="text-md">낮은 시스템 관성은 전력망이 급격한 변화에 대응하는 능력을 저하시켜, 주파수 변동에 매우 취약하게 만듭니다. 이는 사고 발생 시 주파수가 빠르게 붕괴하는 결정적 원인이 되었습니다.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="incident-timeline" class="mb-12">
+            <div class="card">
+                <h2 class="section-title">사고 발생: 결정적 27초</h2>
+                <p class="mb-6 text-lg">초기 발전기 탈락부터 시스템 완전 붕괴까지, 이베리아 반도 대정전은 불과 수십 초라는 짧은 시간 동안 급격하게 진행되었습니다. 이 결정적인 순간들의 시간대별 경과를 통해 사고의 긴박성을 이해할 수 있습니다.</p>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                    <div class="bg-red-100 p-4 rounded-lg text-center shadow">
+                        <div class="kpi-value text-red-600">2.2 GW</div>
+                        <div class="kpi-label">초기 발전량 손실 (12:32:57 CET)</div>
+                    </div>
+                    <div class="bg-red-100 p-4 rounded-lg text-center shadow">
+                        <div class="kpi-value text-red-600">>15 GW</div>
+                        <div class="kpi-label">5초 이내 누적 발전량 손실</div>
+                    </div>
+                    <div class="bg-red-100 p-4 rounded-lg text-center shadow">
+                        <div class="kpi-value text-red-600">27초</div>
+                        <div class="kpi-label">초기 탈락부터 완전 붕괴까지</div>
+                    </div>
+                </div>
+                <h3 class="text-xl font-semibold mb-4 text-blue-700">사고 진행 타임라인 (CET 기준)</h3>
+                <div class="relative">
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <p class="font-semibold text-orange-500">12:32:57</p>
+                        <p>스페인 남부에서 초기 발전기 탈락 시작 (약 2.2 GW 손실). 주파수 하락 및 전압 상승 관찰.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <p class="font-semibold text-orange-500">~12:32:57 - 12:33:02 ("5초 이내")</p>
+                        <p>누적 발전량 손실 15 GW 초과. 이 중 태양광 발전 손실이 8.78 GW ~ 13 GW에 달함.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <p class="font-semibold text-orange-500">12:33:18 - 12:33:21 (3초간)</p>
+                        <p>계통 주파수 48.0 Hz 도달. 자동 부하 차단(UFLS) 장치 작동.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <p class="font-semibold text-orange-500">12:33:21</p>
+                        <p>프랑스-스페인 간 AC 연계선로 동기 상실 방지 보호 장치에 의해 차단.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <p class="font-semibold text-orange-500">12:33:24</p>
+                        <p>이베리아 전력 시스템 완전 붕괴. (초기 탈락 후 27초 경과)</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="frequency-collapse" class="mb-12">
+            <div class="card">
+                <h2 class="section-title">주파수 붕괴: 시스템 안정성의 한계</h2>
+                <p class="mb-6 text-lg">대규모 발전량 손실과 낮은 시스템 관성은 계통 주파수의 급격한 하락을 초래했습니다. 공칭 주파수 50Hz에서 불과 수 초 만에 위험 수준까지 떨어진 주파수 변화는 시스템 붕괴의 핵심적인 동인이었습니다.</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                    <div>
+                        <h3 class="text-xl font-semibold mb-3 text-blue-700">계통 주파수 변화 (CET)</h3>
+                        <p class="mb-4">12:33:18 CET부터 12:33:21 CET까지 단 3초 동안, 이베리아 반도 계통 주파수는 50Hz 부근에서 48.0Hz까지 급락했습니다. 이는 극도로 높은 주파수 변화율(RoCoF)을 의미합니다.</p>
+                        <div class="chart-container h-72 sm:h-80 md:h-96 max-w-lg">
+                            <canvas id="frequencyDropChart"></canvas>
+                        </div>
+                    </div>
+                    <div class="space-y-6">
+                        <div class="bg-indigo-100 p-6 rounded-lg text-center shadow">
+                            <div class="kpi-value text-indigo-600">48.0 Hz</div>
+                            <div class="kpi-label">최저 도달 주파수 (12:33:18-21 CET)</div>
+                        </div>
+                        <div class="bg-indigo-100 p-6 rounded-lg text-center shadow">
+                            <div class="kpi-value text-indigo-600">약 -0.67 Hz/s</div>
+                            <div class="kpi-label">평균 주파수 변화율 (RoCoF)</div>
+                            <p class="mt-2 text-sm text-indigo-700">낮은 관성으로 인한 급격한 변화</p>
+                        </div>
+                        <p class="text-md">자동 부하 차단(UFLS) 장치가 작동했지만, 주파수 하락 속도가 너무 빨라 시스템 붕괴를 막기에는 역부족이었습니다. 이는 낮은 관성 시스템의 방어 시스템 한계를 보여줍니다.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="pv-role" class="mb-12">
+            <div class="card">
+                <h2 class="section-title">태양광 발전의 역할: 양날의 검</h2>
+                <p class="mb-6 text-lg">태양광 발전(PV)은 사고 이전 높은 발전 비중을 차지하며 청정에너지 전환에 기여했지만, 사고 발생 시 대규모 탈락으로 시스템 붕괴를 가속화하는 요인이 되기도 했습니다. 이는 인버터 기반 자원(IBR)의 특성과 계통 안정성 간의 복잡한 관계를 보여줍니다.</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+                    <div>
+                        <h3 class="text-xl font-semibold mb-3 text-blue-700">태양광 발전(PV) 손실 규모</h3>
+                        <p class="mb-1">사고 직전 스페인의 PV 발전량: <strong class="text-orange-500">18,068 MW</strong> (전체의 53.34%)</p>
+                        <p class="mb-1">사고 시 PV 손실 추정치: <strong class="text-red-600">최대 13,000 MW</strong></p>
+                        <p class="mb-4">가동 중이던 PV 용량의 약 <strong class="text-red-600">72%</strong>가 수 초 내 탈락</p>
+                        <div class="chart-container h-64 sm:h-72 md:h-80 max-w-md">
+                            <canvas id="pvLossChart"></canvas>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold mb-3 text-blue-700">PV 탈락의 잠재적 원인</h3>
+                        <p class="mb-4">PV 설비의 대규모 탈락은 설비 자체 결함보다는 계통의 급격한 변화에 대한 보호 장치 반응일 가능성이 높습니다:</p>
+                        <ul class="list-disc list-inside space-y-2 text-gray-700">
+                            <li>계통 주파수 급락 (저주파수, 높은 RoCoF)</li>
+                            <li>전압 변동 및 불안정 (과전압/저전압)</li>
+                            <li>인버터 보호 설정에 따른 자동 정지</li>
+                        </ul>
+                        <p class="mt-4 text-md">이는 다수의 IBR이 유사한 보호 설정으로 인해 동시에 탈락하며 연쇄 고장을 유발할 수 있음을 시사하며, 계통 코드 및 보호 협조 전략의 중요성을 강조합니다.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="conclusion" class="mb-12">
+            <div class="card">
+                <h2 class="section-title">결론 및 시사점: 미래 전력망을 위한 교훈</h2>
+                <p class="mb-6 text-lg">2025년 이베리아 반도 대정전은 현대 전력 시스템, 특히 재생에너지 비중이 높은 시스템의 안정성 확보에 대한 중요한 교훈을 남겼습니다. 이 사고는 에너지 산업이 나아가야 할 방향에 대해 심도 있는 고민을 요구합니다.</p>
+                
+                <div class="mb-8">
+                    <h3 class="text-xl font-semibold mb-3 text-blue-700">주요 기여 요인 종합</h3>
+                    <div class="flex flex-col md:flex-row md:items-center justify-around space-y-4 md:space-y-0 md:space-x-2">
+                        <div class="flowchart-step flex-1">대규모<br>급격한 발전량 손실</div>
+                        <div class="flowchart-arrow hidden md:block">➡️</div>
+                        <div class="flowchart-step flex-1">낮은 시스템 관성<br>(높은 IBR 비중)</div>
+                        <div class="flowchart-arrow hidden md:block">➡️</div>
+                        <div class="flowchart-step flex-1">연쇄 고장<br>(PV 대량 탈락, 연계선 차단)</div>
+                        <div class="flowchart-arrow hidden md:block">➡️</div>
+                        <div class="flowchart-step flex-1 bg-red-100 border-red-500 text-red-800">시스템 붕괴</div>
+                    </div>
+                </div>
+
+                <h3 class="text-xl font-semibold mb-3 text-blue-700">에너지 산업 및 전력망 안정성을 위한 시사점</h3>
+                <ul class="list-disc list-inside space-y-3 text-gray-700">
+                    <li><strong class="text-teal-700">시스템 취약성 인식 및 대비:</strong> 높은 IBR 비중 시스템은 관성 저하에 취약. 합성 관성, 그리드 포밍 인버터 등 완화 대책 필수.</li>
+                    <li><strong class="text-teal-700">IBR 역할 및 제어 강화:</strong> IBR이 관성 제공, 주파수 제어 등 필수 계통 서비스를 제공하도록 기술 개발 및 적용 시급.</li>
+                    <li><strong class="text-teal-700">계통 코드 및 보호 협조 재검토:</strong> 낮은 관성 시스템에 적합한 계통 코드 개정, IBR 동시 탈락 방지 및 계통 안정 기여 유도.</li>
+                    <li><strong class="text-teal-700">정확한 모델링 및 시뮬레이션:</strong> 낮은 관성 시스템의 동특성 예측 및 대응 전략 수립을 위한 정교한 모델링 중요.</li>
+                    <li><strong class="text-teal-700">데이터 투명성 및 공유 강화:</strong> 사고 분석 및 학습을 위한 시의적절하고 투명한 데이터 공유 필요.</li>
+                </ul>
+                <p class="mt-6 text-md font-semibold text-blue-800">결론적으로, 이베리아 대정전은 재생에너지 중심의 미래 전력 시스템을 성공적으로 구축하고 운영하기 위해 기술적, 정책적, 운영적 측면에서의 다각적인 노력이 시급함을 보여주는 경고입니다.</p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-blue-800 text-blue-200 py-6 text-center">
+        <div class="container mx-auto px-4">
+            <p>&copy; 2025 전력 시스템 안정성 연구. 본 자료는 제공된 보고서를 기반으로 작성되었습니다.</p>
+        </div>
+    </footer>
+
+    <script>
+        function processLabel(label, maxLength = 16) {
+            if (label.length <= maxLength) {
+                return label;
+            }
+            const words = label.split(' ');
+            const lines = [];
+            let currentLine = '';
+            for (const word of words) {
+                if ((currentLine + word).length > maxLength && currentLine.length > 0) {
+                    lines.push(currentLine.trim());
+                    currentLine = word + ' ';
+                } else {
+                    currentLine += word + ' ';
+                }
+            }
+            if (currentLine.trim().length > 0) {
+                lines.push(currentLine.trim());
+            }
+            return lines;
+        }
+
+        const tooltipTitleCallback = (tooltipItems) => {
+            const item = tooltipItems[0];
+            let label = item.chart.data.labels[item.dataIndex];
+            if (Array.isArray(label)) {
+                return label.join(' ');
+            }
+            return label;
+        };
+        
+        const commonChartOptions = {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: {
+                    position: 'top',
+                    labels: {
+                        font: { size: 12 }
+                    }
+                },
+                tooltip: {
+                    callbacks: {
+                        title: tooltipTitleCallback
+                    }
+                }
+            }
+        };
+
+        // Chart 1: Generation Mix
+        const genMixCtx = document.getElementById('generationMixChart').getContext('2d');
+        new Chart(genMixCtx, {
+            type: 'doughnut',
+            data: {
+                labels: [
+                    processLabel('태양광 발전 (PV)'), 
+                    processLabel('복합화력 (CCGT)'), 
+                    processLabel('풍력 및 수력'), 
+                    processLabel('기타 발전원')
+                ],
+                datasets: [{
+                    label: '발전원 구성 비율 (%)',
+                    data: [53.34, 4.82, 20.0, 21.84], // 풍력+수력 약 20%, 기타는 나머지
+                    backgroundColor: ['#f6ad55', '#ef4444', '#3b82f6', '#a855f7'],
+                    borderColor: '#ffffff',
+                    borderWidth: 2
+                }]
+            },
+            options: { ...commonChartOptions }
+        });
+
+        // Chart 2: Frequency Drop
+        const freqCtx = document.getElementById('frequencyDropChart').getContext('2d');
+        new Chart(freqCtx, {
+            type: 'line',
+            data: {
+                labels: [
+                    processLabel('12:32:57 (시작점 근사)'), 
+                    processLabel('12:33:00'), 
+                    processLabel('12:33:05'), 
+                    processLabel('12:33:10'), 
+                    processLabel('12:33:15'), 
+                    processLabel('12:33:18'), 
+                    processLabel('12:33:21 (48Hz 도달)')
+                ],
+                datasets: [{
+                    label: '계통 주파수 (Hz)',
+                    data: [50.0, 49.8, 49.5, 49.0, 48.5, 48.1, 48.0], // Hypothetical smooth drop for illustration
+                    borderColor: '#ef4444', // red-500
+                    backgroundColor: 'rgba(239, 68, 68, 0.1)',
+                    tension: 0.1,
+                    fill: true
+                }]
+            },
+            options: {
+                ...commonChartOptions,
+                scales: {
+                    y: {
+                        beginAtZero: false,
+                        min: 47.5,
+                        max: 50.5,
+                        title: { display: true, text: '주파수 (Hz)' }
+                    },
+                    x: {
+                        title: { display: true, text: '시간 (CET)' }
+                    }
+                }
+            }
+        });
+
+        // Chart 3: PV Loss
+        const pvLossCtx = document.getElementById('pvLossChart').getContext('2d');
+        new Chart(pvLossCtx, {
+            type: 'bar',
+            data: {
+                labels: [processLabel('사고 이전 가동 PV'), processLabel('사고 시 탈락 PV')],
+                datasets: [{
+                    label: '태양광 발전량 (MW)',
+                    data: [18068, 13000],
+                    backgroundColor: ['#3b82f6', '#ef4444'], // blue-500, red-500
+                    borderColor: ['#2563eb', '#dc2626'],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                ...commonChartOptions,
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        title: { display: true, text: '발전량 (MW)' }
+                    }
+                }
+            }
+        });
+
+    </script>
+</body>
+</html>
